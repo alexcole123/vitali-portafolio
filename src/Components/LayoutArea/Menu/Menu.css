@@ -1,0 +1,14 @@
+.Menu {
+	display: flex;
+    gap: 30%;
+    padding: 0.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Menu > .active {
+    color: blue;
+    font-weight: bold;
+    font-family: Arial;
+}

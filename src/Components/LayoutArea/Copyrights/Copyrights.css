@@ -1,0 +1,43 @@
+.Copyrights {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    position: relative;
+    cursor: pointer;
+}
+
+.fade-message {
+    color: black;
+    border-radius: 5px;
+    animation: fadeOut 2s ease-in-out;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.3rem;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fade-message.show {
+opacity: 1;
+}
+
+.author-link {
+    color: #0077b5; /* LinkedIn blue */
+    text-decoration: none;
+    font-weight: bold;
+    }
+    
+    .author-link:hover {
+    text-decoration: underline;
+    color: #005582;
+    }
+    

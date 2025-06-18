@@ -1,0 +1,32 @@
+.Layout {
+	height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 5fr;
+    grid-template-rows: 10% 85% 5%;
+}
+
+header, footer, aside {
+    grid-column: span 2;
+}
+
+main {
+    overflow: auto;
+}
+
+header, footer {
+    border: 0.1px solid;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* space between header and menu */
+    align-items: center;            /* vertically center them */
+    padding: 1rem;
+    background-color: #e3e1e1;      /* optional */
+  }
+
+aside{
+    margin-right: 40%;
+}
+  
