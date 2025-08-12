@@ -41,3 +41,12 @@ opacity: 1;
     color: #005582;
     }
     
+    @media (max-width: 480px) {
+    .Copyrights h4 {
+        font-size: 0.8rem;
+    }
+
+    .fade-message {
+        font-size: 0.75rem;
+    }
+}

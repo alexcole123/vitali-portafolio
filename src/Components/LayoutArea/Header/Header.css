@@ -1,15 +1,37 @@
 .Header {
-	height: 100%;
-    width: 10%;
+    width: 100%;
+    padding: 0.5rem 1rem; /* Reduced from 1rem */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: underline;
 }
 
-img {
-    width: 100%;
-    height: 200%;
+.Header img {
+    max-width: 100%;
+    height: auto;
+    max-height: 50px; /* Reduced from 80px */
     filter: grayscale(5%);
     transition: transform 0.7s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .Header {
+        padding: 0.25rem 0.5rem; /* Even smaller on mobile */
+    }
+
+    .Header img {
+        max-height: 40px; /* Smaller on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .Header {
+        padding: 0.25rem;
+    }
+
+    .Header img {
+        max-height: 35px; /* Even smaller on phones */
+    }
 }

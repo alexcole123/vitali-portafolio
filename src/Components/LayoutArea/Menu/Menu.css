@@ -1,14 +1,69 @@
 .Menu {
-	display: flex;
-    gap: 30%;
-    padding: 0.5%;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem; /* Reduced gap */
+    padding: 0.5rem 1rem; /* Reduced padding */
+    background: #fff;
+    border-top: 1px solid #eee; /* Subtle separator */
 }
 
-.Menu > .active {
+.Menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 0.75rem; /* Smaller padding */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.9rem; /* Smaller text */
+    font-weight: 500;
+    min-height: 36px; /* Smaller touch targets */
+    display: flex;
+    align-items: center;
+}
+
+.Menu a:hover {
+    background-color: #e9ecef;
+}
+
+.Menu a.active {
     color: blue;
     font-weight: bold;
-    font-family: Arial;
+    background-color: #e7f3ff;
+}
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+    .Menu {
+        gap: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        overflow-x: auto; /* Horizontal scroll */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .Menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Menu a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+        min-width: max-content;
+        min-height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Menu {
+        padding: 0.25rem;
+        gap: 0.1rem;
+    }
+
+    .Menu a {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+        min-height: 30px;
+    }
 }
